@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://github.com/jesusmarroquincruz/service-configuration.git
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+  security:
+    user:
+      name: root
+      password: root
